@@ -13,7 +13,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /*
-  This Program loads a DataFrame from a relational database table over JDBC, manipulates the data, and saves the results back to a table.
+   This Program loads a DataFrame from a relational database table over JDBC, manipulates the data, and saves the results back to a table.
 */
 
 public final class JUsingJDBC {
