@@ -1,8 +1,6 @@
 package ho.mi
 
-/* This program reads data from CSV file into a DataFrame and using the DataFrame creates a table in Postgres Database */
-/* Observation : - Though jars were available in SPARK_HOME/jars library dependencies needed to be added to build.sbt to package and execute the Program */
-
+/* This program reads data from JSON file containing nested array and using it created 2 tables in the Postgres database */
 
 import org.apache.spark.sql.SaveMode
 import org.apache.spark.sql.SparkSession
