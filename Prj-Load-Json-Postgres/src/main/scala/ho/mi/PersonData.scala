@@ -24,6 +24,18 @@ object Personidata {
 	val jdbcUrl = dbProperties.getProperty("jdbcUrl")
 
 	
+	/*
+	The Following code using Flattening feature displays nested array elements in JSON Array along with Non-array elements
+	Note that while diplaying the results as there are multiple values of Array fileds with single value, too will appear repetedly multiple times
+		
+	val df_personNew=spark.read.json("personNew.json")
+	df_personNew.registerTempTable("personNew")
+	spark.sql("select created,created_by,mi_identity_handles.interface_identifier,mi_identity_handles.unique_identifier,
+	mi_identity_handles.visibility_marker,internal_handle.interface_identifier,internal_handle.unique_identifier,internal_handle.visibility_marker,
+	person_space from personJson LATERAL VIEW explode(identity_handles) as mi_identity_handles").show(false)
+	
+	*/
+	
 	//val df_id=spark.read.format("json").option("header", "true").load("person.json")
 	val df_person=spark.read.json("person.json")
 	
